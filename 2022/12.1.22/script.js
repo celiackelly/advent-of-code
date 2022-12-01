@@ -18,3 +18,9 @@ let max = Math.max(...totalCaloriesByElf)
 console.log(max)
 
 //67633
+
+
+//Part 2 - Find the calories carried by the top 3 elves and return the total calories
+
+let top3CaloriesSum = totalCaloriesByElf.sort((a, b) => b - a).slice(0, 3).reduce((prev, curr) => prev + curr, 0)
+console.log(top3CaloriesSum)
