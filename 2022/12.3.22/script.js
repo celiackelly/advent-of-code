@@ -29,3 +29,16 @@ const sumOfPriorities = misplacedItemPriorities.reduce((prev, curr) => prev + cu
 console.log(sumOfPriorities)
 
 //12.3.22 Part 2
+
+const badges = []
+
+for (let i = 0; i < rucksacks.length - 2; i += 3) {
+    const elf1 = rucksacks[i].split('')
+    const elf2 = rucksacks[i + 1].split('')
+    const elf3 = rucksacks[i + 2].split('')
+    const badge = elf1.find(item => elf2.includes(item) && elf3.includes(item))
+    badges.push(badge)
+}
+
+const sumOfBadgePriorities = badges.reduce((prev, curr) => prev + calcPriority(curr), 0)
+console.log(sumOfBadgePriorities)
