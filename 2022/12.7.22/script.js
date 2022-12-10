@@ -27,7 +27,10 @@ function sizeOfDirectoriesOver100000(rootDir) {
 
 }
 
+//start by mapping the file system? 
+
 //every time we reach a dir, we need to get its total file size and add it to our array 
 
 //then filter the array for values >= 100000, and reduce to find their sum 
+
 
